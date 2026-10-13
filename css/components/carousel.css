@@ -1,0 +1,22 @@
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel__track {
+    display: flex;
+    gap: 4px;
+    margin: 0 auto;
+}
+
+.carousel__track > * {
+    scroll-snap-align: start;
+}

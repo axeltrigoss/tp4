@@ -1,0 +1,102 @@
+.products {
+    padding: 7rem 2rem;
+}
+
+.products__container {
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--color-sand-20);
+    border: 1.5px solid var(--color-sand);
+    border-radius: var(--radius-card);
+    padding: 1rem;
+    width: 366px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+@media (hover: hover) {
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(48, 38, 28, 0.08);
+    }
+}
+
+.product-card__img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.product-card__img {
+    width: 100%;
+    height: 364px;
+    object-fit: cover;
+    border-radius: var(--radius-img);
+}
+
+.product-card__fav-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 33px;
+    height: 33px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.product-card__fav-input:checked + .product-card__fav-btn img {
+    filter: invert(12%) sepia(94%) saturate(7483%) hue-rotate(3deg) brightness(90%) contrast(115%);
+}
+
+.product-card__title {
+    font-family: var(--font-body);
+    font-size: 2.375rem;
+    font-weight: 600;
+    color: var(--color-espresso);
+}
+
+.product-card__desc {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--color-maroon);
+}
+
+.product-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.product-card__price {
+    font-family: var(--font-ui);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-espresso);
+}
+
+.product-card__btn {
+    background-color: var(--color-maroon);
+    color: var(--color-white);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1.625rem;
+    border-radius: var(--radius-btn);
+    transition: background-color 200ms ease;
+}
+
+.product-card__btn:hover {
+    background-color: var(--color-espresso);
+}
